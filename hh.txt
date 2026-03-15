@@ -195,7 +195,7 @@ task.wait(0.5)
 Sound:Stop()
 ScreenGui:Destroy()
 
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/kayrus999/kayrus99/refs/heads/main/kayrusLINDO"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/kayrus999/kayrus99/refs/heads/main/kayrusLINDO%20(1).txt"))()
 
 local Window = redzlib:MakeWindow({
   Title = "LYRA HUB",
