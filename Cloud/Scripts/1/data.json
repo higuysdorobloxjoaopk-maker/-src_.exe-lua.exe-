@@ -1,8 +1,8 @@
 {
-  name = "Infinite Yield",
-  description = "Painel admin Infinite Yield",
-  secret = {
-    id = "yd127ad412"
+  "name": "Infinite Yield",
+  "description": "Painel admin Infinite Yield",
+  "secret": {
+    "id": "yd127ad412"
   },
-  loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()'
+  "loadstring": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\"))()"
 }
