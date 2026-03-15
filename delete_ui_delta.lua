@@ -1,4 +1,15 @@
---[[ Protected by Lua Guard ]]
+--[[
+█░░ █░█ ▄▀▄ █░█ ░ █▀▄ █▀ █░░
+█░░ █░█ █▀█ ▀▄▀ ░ █░█ █▀ █░░
+▀▀▀ ▀▀▀ ▀░▀ ░▀░ ▀ ▀▀░ ▀▀ ▀▀▀
+▀█▀ ▄▀▄ ░ █░█ █▀█
+░█░ █▀█ ░ █░█ ░▄▀
+░▀░ ▀░▀ ▀ ░▀░ █▄▄
+All scripts and all content from luay are copyrighted by ©joaopk.
+
+Script description:
+This script destroys the UI of the Delta Executor. This script is part of Delta UU v2 and would be loaded at the beginning to "replace" the UI.
+]]
 
 ( function (...) return ({J7=math.huge,s= function (_lIIlIlllIl,...) local _IlIIIIIlIl=_lIIlIlllIl.Y.M(_lIIlIlllIl,_lIIlIlllIl.p3N) return _lIIlIlllIl:r2S(_IlIIIIIlIl,_G,{})(...) end
  ,gbebm= function (_lIIlIlllIl,_lIIlIlllIl,_IlIIIIIlIl,_IIlIIIlIII) local _IlIIlIlIIl=_IIlIIIlIII+0x16; local _IlIIlIlIIl=_IIlIIIlIII%_IIlIIIlIII; local _IlIIlIlIIl=_lIIlIlllIl%0x37; local _IIlIIIlIII=_IIlIIIlIII+0x5E; if _lIIlIlllIl then return _IlIIIIIlIl end
