@@ -1,3 +1,7 @@
+--[[
+walkfling(all credits infinite yield https://github.com/EdgeIY/infiniteyield)
+toggle(credits luay/joaopk)
+]]
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
