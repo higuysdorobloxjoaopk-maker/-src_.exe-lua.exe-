@@ -1,0 +1,67 @@
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local root = character:WaitForChild("HumanoidRootPart")
+local humanoid = character:WaitForChild("Humanoid")
+
+local isTrueValue = character:FindFirstChild("isTrue")
+
+if not isTrueValue then
+    isTrueValue = Instance.new("StringValue")
+    isTrueValue.Name = "isTrue"
+    isTrueValue.Value = "true"
+    isTrueValue.Parent = character
+else
+    if isTrueValue.Value == "true" then
+        isTrueValue.Value = "false"
+        return
+    else
+        isTrueValue.Value = "true"
+    end
+end
+
+local noclipConnection
+noclipConnection = RunService.Stepped:Connect(function()
+    if isTrueValue.Value == "false" then
+        noclipConnection:Disconnect()
+        return
+    end
+    for _, v in pairs(character:GetDescendants()) do
+        if v:IsA("BasePart") and v.CanCollide then
+            v.CanCollide = false
+        end
+    end
+end)
+
+local diedConnection
+diedConnection = humanoid.Died:Connect(function()
+    isTrueValue.Value = "false"
+    diedConnection:Disconnect()
+end)
+
+task.spawn(function()
+    local movel = 0.1
+    repeat
+        RunService.Heartbeat:Wait()
+
+        if not character or not character.Parent or not root or not root.Parent then
+            break
+        end
+
+        local vel = root.Velocity
+        root.Velocity = vel * 10000 + Vector3.new(0, 10000, 0)
+
+        RunService.RenderStepped:Wait()
+        if character and character.Parent and root and root.Parent then
+            root.Velocity = vel
+        end
+
+        RunService.Stepped:Wait()
+        if character and character.Parent and root and root.Parent then
+            root.Velocity = vel + Vector3.new(0, movel, 0)
+            movel = movel * -1
+        end
+    until isTrueValue.Value == "false"
+end)
